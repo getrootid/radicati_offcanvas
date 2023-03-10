@@ -1,0 +1,5 @@
+name: "Radicati: Off-Canvas"
+type: module
+description: "Module that provides an off-canvas setup, dependent on templates in the Radicati Drupal parent theme"
+core_version_requirement: ^8 || ^9
+package: "radicati"

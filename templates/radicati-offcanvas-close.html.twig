@@ -1,0 +1,17 @@
+{{ attach_library('radicati_offcanvas/rad_offcanvas') }}
+
+{% set base = 'off-canvas' %}
+
+<div class="off-canvas__close--wrapper">
+  <button type="button" class="off-canvas__close"
+    aria-controls="off-canvas"
+    title="Close Off-Canvas Navigation">
+    {% if label_display == 'left' %}<span class="rad-offcanvas-toggle-label rad-label-left">{{ label }}</span>{% endif %}
+    <span class="close-button" aria-hidden="true">
+      <span></span>
+      <span></span>
+    </span>
+    {% if label_display == 'right' %}<span class="rad-offcanvas-toggle-label rad-label-right">{{ label }}</span>{% endif %}
+    {% if label_display == 'none' %}<span class="sr-only">{{ label }}</span>{% endif %}
+  </button>
+</div>

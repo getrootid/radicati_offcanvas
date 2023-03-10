@@ -1,0 +1,82 @@
+.block-radicati-offcanvas {
+  display: flex;
+  align-items: center;
+}
+
+#rad-offcanvas-toggle {
+  border: 0;
+  background: transparent;
+  display: flex;
+  align-items: center;
+}
+
+#block-offcanvasclose {
+  justify-content: flex-end;
+  padding-right: 10px;
+  padding-top: 10px;
+}
+
+.off-canvas__close {
+  align-items: center;
+  background-color: black;
+  border: none;
+  border-radius: 50%;
+  color: white;
+  display: flex;
+  height: 2.75rem;
+  justify-content: center;
+  padding: 0;
+  width: 2.75rem;
+}
+
+.off-canvas__close .close-button {
+  display: block;
+  height: 1.25rem;
+  position: relative;
+  width: 1.25rem;
+}
+
+.off-canvas__close .close-button span {
+  background-color: white;
+  display: block;
+  border-radius: 0.125rem;
+  height: 0.125rem;
+  position: absolute;
+  top: 50%;
+  width: 1.25rem;
+  transform-origin: center;
+  transition: transform 350 ease;
+}
+
+.off-canvas__close .close-button span:first-of-type {
+  transform: translateY(-50%) rotate(45deg);
+}
+
+.off-canvas__close .close-button span:nth-of-type(2) {
+  transform: translateY(-50%) rotate(-45deg);
+}
+
+.off-canvas__close .close-button:active span:first-of-type,
+.off-canvas__close .close-button:focus span:first-of-type {
+  transform: translateY(-50%) rotate(-45deg);
+}
+
+.off-canvas__close .close-button:active span:nth-of-type(2),
+.off-canvas__close .close-button:focus span:nth-of-type(2) {
+  transform: translateY(-50%) rotate(45deg);
+}
+
+.off-canvas__overlay {
+  background-color: rgba(255, 255, 255, 0.5);
+  display: none;
+  height: 100vh;
+  left: 0;
+  position: absolute;
+  top: 0;
+  width: 100vw;
+  z-index: 1;
+}
+
+.is-overlay-active .off-canvas__overlay {
+  display: block;
+}

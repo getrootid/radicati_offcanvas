@@ -1,0 +1,11 @@
+rad_offcanvas:
+  version: VERSION
+  css:
+    theme:
+      dist/css/rad_offcanvas.css: {}
+  js:
+    dist/js/rad_offcanvas.js: {}
+  dependencies:
+    - core/drupal
+    - core/once
+    - core/tabbable

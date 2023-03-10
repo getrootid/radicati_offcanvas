@@ -1,0 +1,22 @@
+<?php
+
+// TODO: Finish this module! Needs an overlay and some JS to be fixed.
+
+function radicati_offcanvas_theme()
+{
+  return [
+    'radicati_offcanvas_toggle' => [
+      'variables' => ['label' => NULL, 'label_display' => NULL]
+    ],
+    'radicati_offcanvas_close' => [
+      'variables' => ['label' => NULL, 'label_display' => NULL]
+    ],
+  ];
+}
+
+function radicati_offcanvas_page_attachments(array &$attachments)
+{
+  //  if (!\Drupal::service('router.admin_context')->isAdminRoute()) {
+  //    $attachments['#attached']['library'][] = 'radicati_offcanvas/mmenu';
+  //  }
+}
