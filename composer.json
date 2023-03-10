@@ -1,0 +1,16 @@
+{
+  "name": "getrootid/radicati_offcanvas",
+  "description": "Drupal module that provides an off-canvas setup, dependent on templates in the Radicati Drupal parent theme",
+  "type": "drupal-module",
+  "authors": [
+    {
+      "name": "Jason Neumark Mickela",
+      "email": "jason@rootid.com"
+    },
+    {
+      "name": "Meg Claypool",
+      "email": "meg@rootid.com"
+    }
+  ],
+  "require": {}
+}
