@@ -12,5 +12,6 @@
       "email": "meg@rootid.com"
     }
   ],
+  "license": "GPL-3.0-or-later",
   "require": {}
 }
