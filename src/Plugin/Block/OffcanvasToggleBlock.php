@@ -23,7 +23,7 @@ class OffcanvasToggleBlock extends BlockBase
     return [
       '#theme'  => 'radicati_offcanvas_toggle',
       '#label' => 'Menu',
-      '#label_display' => 'left',
+      '#label_display' => 'none',
       '#attached' => [
         'library' => [
           'radicati_offcanvas/rad_offcanvas',

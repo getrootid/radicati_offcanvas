@@ -88,15 +88,15 @@
         }
       }
     });
-    window.addEventListener("resize", function () {
-      if (props.olivero.isDesktopNav()) {
-        toggleNav(props, false);
-        props.body.classList.remove("is-overlay-active");
-        props.body.classList.remove("is-fixed");
-      }
+    // window.addEventListener("resize", function () {
+    //   if (props.olivero.isDesktopNav()) {
+    //     toggleNav(props, false);
+    //     props.body.classList.remove("is-overlay-active");
+    //     props.body.classList.remove("is-fixed");
+    //   }
 
-      Drupal.olivero.closeAllSubNav();
-    });
+    //   Drupal.olivero.closeAllSubNav();
+    // });
     props.navWrapper.addEventListener("click", function (e) {
       if (
         e.target.matches(
@@ -120,13 +120,11 @@
       var navWrapperId = "off-canvas";
 
       if (header) {
-        var navWrapper = header.querySelector("#".concat(navWrapperId));
+        var navWrapper = context.querySelector("#".concat(navWrapperId));
         var navButton = context.querySelector("#rad-offcanvas-toggle");
         var closeButton = context.querySelector(".off-canvas__close");
         var body = context.querySelector("body");
         var overlay = context.querySelector(".off-canvas__overlay");
-
-        // console.log(navWrapper);
 
         init({
           header: header,

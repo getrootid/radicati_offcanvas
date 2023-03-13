@@ -1,26 +1,43 @@
-.block-radicati-offcanvas {
+:root {
+  --offcanvas-min-width: 320px;
+  --offcanvas-max-width: 500px;
+  --offcanvas-width: 80vw;
+}
+
+/* Base styles for offcanvas */
+#off-canvas {
+  background-color: white;
+  box-shadow: 0 0 72px rgba(0, 0, 0, 0.1);
+  bottom: 0;
+  color: black;
   display: flex;
-  align-items: center;
+  flex-direction: column;
+  right: 100%;
+  overflow-y: scroll;
+  overscroll-behavior: contain;
+  padding: rem(40px 0 0 0);
+  position: fixed;
+  top: var(--drupal-displace-offset-top, --gin-toolbar-y-offset, 0);
+  transition: visibility 300ms, transform 300ms;
+  visibility: hidden;
+  width: clamp(
+    var(--offcanvas-min-width),
+    var(--offcanvas-width),
+    var(--offcanvas-max-width)
+  );
+  z-index: 1000;
 }
 
-#rad-offcanvas-toggle {
-  border: 0;
-  background: transparent;
-  display: flex;
-  align-items: center;
+#off-canvas.is-active {
+  visibility: visible;
+  transform: translateX(100%);
 }
 
-#block-offcanvasclose {
-  justify-content: flex-end;
-  padding-right: 10px;
-  padding-top: 10px;
-}
-
+/* Off-canvas close button */
 .off-canvas__close {
   align-items: center;
-  background-color: black;
+  background-color: transparent;
   border: none;
-  border-radius: 50%;
   color: white;
   display: flex;
   height: 2.75rem;
@@ -30,22 +47,24 @@
 }
 
 .off-canvas__close .close-button {
-  display: block;
-  height: 1.25rem;
+  align-items: center;
+  display: flex;
+  height: 2rem;
+  justify-content: center;
   position: relative;
-  width: 1.25rem;
+  width: 2rem;
 }
 
 .off-canvas__close .close-button span {
-  background-color: white;
+  background-color: black;
   display: block;
   border-radius: 0.125rem;
   height: 0.125rem;
   position: absolute;
   top: 50%;
-  width: 1.25rem;
+  width: 1.5rem;
   transform-origin: center;
-  transition: transform 350 ease;
+  transition: transform 250 ease-in-out;
 }
 
 .off-canvas__close .close-button span:first-of-type {
@@ -66,17 +85,34 @@
   transform: translateY(-50%) rotate(45deg);
 }
 
+/* Off-canvas overlay */
 .off-canvas__overlay {
-  background-color: rgba(255, 255, 255, 0.5);
   display: none;
-  height: 100vh;
-  left: 0;
-  position: absolute;
-  top: 0;
-  width: 100vw;
-  z-index: 1;
 }
 
 .is-overlay-active .off-canvas__overlay {
+  background-color: white;
   display: block;
+  left: 0;
+  height: 100%;
+  opacity: 0.9;
+  position: absolute;
+  top: 0;
+  width: 100%;
+  z-index: 10;
+}
+
+/* Off-canvas toggle (usually in header) */
+#rad-offcanvas-toggle {
+  align-items: center;
+  border: 0;
+  background: transparent;
+  display: flex;
+  justify-content: center;
+  height: 2.75rem;
+  width: 2.75rem;
+}
+
+#rad-offcanvas-toggle i {
+  font-size: 1.5rem;
 }
