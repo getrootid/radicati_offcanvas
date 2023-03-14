@@ -4,6 +4,15 @@
   --offcanvas-width: 80vw;
 }
 
+/* Making guesses about block names */
+#block-offcanvasclose .contextual {
+  transform: translate(rem(20px, -20px));
+}
+
+#block-offcanvastoggle .contextual {
+  transform: translate(rem(20px, -20px));
+}
+
 /* Base styles for offcanvas */
 #off-canvas {
   background-color: white;
