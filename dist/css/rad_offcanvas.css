@@ -26,7 +26,7 @@
   overscroll-behavior: contain;
   padding: rem(40px 0 0 0);
   position: fixed;
-  top: var(--drupal-displace-offset-top, --gin-toolbar-y-offset, 0);
+  top: var(--drupal-displace-offset-top, var(--gin-toolbar-y-offset, 0));
   transition: visibility 300ms, transform 300ms;
   visibility: hidden;
   width: clamp(
